@@ -122,6 +122,7 @@ form {
   gap: 5px;
   justify-content: center;
   margin-bottom: 33px;
+  width: 100%;
 }
 
 #errorMessage {
