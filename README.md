@@ -61,7 +61,8 @@ The "aha!" moment was realizing how powerful simple JavaScript can be when worki
 
 
 ### ON mobile 
-![Forecast UI](./assets/screenshot2.png)
+![image](https://github.com/user-attachments/assets/cc1cfa4c-7611-4724-9cac-7f8f56d489bc)
+
 
 ---
 
