@@ -124,23 +124,28 @@ function showError() {
 }
 
 function getWeeklyData(weatherData) {
-  const date = new Date();
+  const availableDays = weatherData.forecast.forecastday.length;
 
-  for (let i = 0; i < 6; i++) {
-    const currentDate = new Date(date);
-    currentDate.setDate(date.getDate() + i);
-
+  for (let i = 0; i < availableDays; i++) {
+    const currentDate = new Date(weatherData.forecast.forecastday[i].date);
     const day = currentDate.getDate();
     const month = currentDate.getMonth() + 1;
-
     const formattedDate = `${day}/${month}`;
     const temp = weatherData.forecast.forecastday[i].day.avgtemp_c;
 
     const element = document.getElementById((i + 1).toString());
     element.querySelector("p").textContent = formattedDate;
     element.querySelector("span").textContent = `${temp}\u00B0`;
+    element.style.display = "block"; // just in case some were hidden
+  }
+
+  // Hide any extra boxes if they exist in HTML (like id="4", "5", "6")
+  for (let i = availableDays + 1; i <= 6; i++) {
+    const extra = document.getElementById(i.toString());
+    if (extra) extra.style.display = "none";
   }
 }
+
 function getHourlyData(weatherData) {
   for (let i = 0; i <= 21; i = i + 3) {
     const data = weatherData.forecast.forecastday[0].hour[i].temp_c;
