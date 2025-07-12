@@ -26,7 +26,7 @@ It fetches live weather data and displays it in a clean UI that adapts across sc
 - 🔍 **Search by City** – Enter any city and get weather details  
 - 🌤️ **Current Weather** – Temperature, condition, feels-like temperature  
 - 🕒 **Hourly Forecast** – Weather for each 3-hour block  
-- 📆 **Weekly Forecast** – 5-day forecast at a glance  
+- 📆 **Weekly Forecast** – 3-day forecast at a glance  
 - 💨 **Wind & Humidity** – Real-time atmospheric data  
 
 ---
